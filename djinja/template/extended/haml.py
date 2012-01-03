@@ -6,6 +6,9 @@ from hamlpy import hamlpy
 def create_node(haml_line):
     stripped_line = haml_line.strip()
 
+    if not stripped_line:
+        return None
+
     if stripped_line[0] == TAG:
         return JinjaTagNode(haml_line)
 
