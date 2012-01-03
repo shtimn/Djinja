@@ -20,7 +20,8 @@ class JinjaTagNode(TagNode):
     self_closing.update({
         'macro': 'endmacro',
         'call': 'endcall',
-        'trans': 'endtrans'
+        'trans': 'endtrans',
+        'assets': 'endassets'
     })
 
     may_contain = dict((key, [val]) for key, val in TagNode.may_contain.iteritems())
